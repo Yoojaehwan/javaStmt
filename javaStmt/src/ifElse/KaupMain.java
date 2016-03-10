@@ -26,21 +26,14 @@ import org.omg.Messaging.SyncScopeHelper;
 public class KaupMain {
 	public static void main(String[] args) {
 		// 지역변수 영역
-		
-		 int kaup=0 ;
-		 double  weight = 0.0, height=0.0;
-		 
-		 String result = "", name = null; //"" 리터럴이라고 명명하겠음
 		 Scanner scanner = new Scanner(System.in);
 		 Kaup k = new Kaup();
-		 k.setName(scanner.next());
 		 System.out.println("이름, 키 , 몸무게 입력");
-		 name=scanner.next();
-		 height=scanner.nextInt();
-		 weight=scanner.nextInt();
-		 
-		 result = k.getResult();
-		 System.out.println(name+"님은"+result+"입니다.");
+		 k.setName(scanner.next());
+		 k.setHeight(scanner.nextInt());
+		 k.setWeight(scanner.nextInt());
+		 k.setResult();
+		 System.out.println(k.toString());
 	}
 
 	

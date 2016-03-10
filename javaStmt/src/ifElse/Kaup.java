@@ -1,12 +1,12 @@
 package ifElse;
 
+
 public class Kaup {
-	// 송석영역 : field	 필드는 가두고
+	// 송석영역 : field	 필드는 가두고 메서드를 공하는, 값이 있는 영역
 	private String name;
 	private int kaup;
 	private double height,weight;
 	private String result;
-	//kaup = (int) ((weight/(height*height))*10000);
 	
 	
 	// ALT  SHIFT  S R 
@@ -63,6 +63,7 @@ public class Kaup {
 
 		
 	public void setResult() {
+		setKaup();    // setKaup를 호출한다.
 		String temp= "";
 		if (kaup >=30) {
 			 temp ="비만";
@@ -79,6 +80,14 @@ public class Kaup {
 		}else{
 			 temp ="소모증";
 		}
-		this.result = result;
+		this.result = temp;
+	}
+
+
+	@Override
+	public String toString() {
+		return "카우푸지수 [이름=" + name + ", + 결과 =" + result + "]";
+				
 	}	
+	
 }
