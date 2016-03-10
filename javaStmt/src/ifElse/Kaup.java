@@ -63,7 +63,7 @@ public class Kaup {
 
 		
 	public void setResult() {
-		setKaup();    // setKaup를 호출한다.
+		setKaup();    // setKaup를 호출한다.this 생략 this는 나라고 생각 
 		String temp= "";
 		if (kaup >=30) {
 			 temp ="비만";
