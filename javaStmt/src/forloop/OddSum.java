@@ -1,30 +1,28 @@
 package forloop;
 
 /**
- *@file : OddSum.java
- *@author $ rjh1226@naver.com
- *@date  2016. 3. 10.
- *@Story 1부터 10까지 홀수의 합
+ * @file : OddSum.java
+ * @author $ rjh1226@naver.com
+ * @date 2016. 3. 10.
+ * @Story 1부터 10까지 홀수의 합
  */
 public class OddSum {
 	public static void main(String[] args) {
-		int sum=0, i=0;
-		
+		int sum = 0, i = 0;
+
 		System.out.println("1번째 방법");
-		for ( i = 0; i < 10; i+=2) {
-				sum +=i;
+		for (i = 0; i < 10; i += 2) {
+			sum += i;
 		}
 		System.out.println("1부터 10까지 홀수의 합" + sum);
 		System.out.println("2번째 방법");
 		for (i = 0; i < 10; i++) {
-			
-			if(i % 2 == 1) {
-					sum+= i;
+
+			if (i % 2 == 1) {
+				sum += i;
 			}
 		}
 		System.out.println("1부터 10까지 홀수의 합" + sum);
-		
 
-		}				
 	}
-
+}
