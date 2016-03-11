@@ -1,4 +1,4 @@
-package back;
+package bank;
 
 public interface BankService {
 	/**

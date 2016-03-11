@@ -1,4 +1,4 @@
-package back;
+package bank;
 
 public class AccountBean {
 	private int accountNo; //계좌번호
