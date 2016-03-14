@@ -8,11 +8,26 @@ import java.util.Scanner;
  * @date 2016. 3. 11.
  * @Story 입력된 3개 숫자에서 가장 큰 수
  */
-public class BigNumber {
+public class BigNumberMain {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("3개의 숫자를 입력하세요");
-		int a = scanner.nextInt(), b = scanner.nextInt(), c = scanner.nextInt();
+		
+		BigNumber big = new BigNumber();
+		System.out.println("가장 큰 수는" +
+		big.getBigNum(scanner.nextInt(), scanner.nextInt(), scanner.nextInt())+"입니다.");
+
+
+	}
+
+}
+
+
+//{}메모리 영억 ,  BigNumber b = new BigNumber
+class BigNumber {
+	/*public BigNumber() {
+		//  생략되었다.}
+*/	public int getBigNum(int a, int b, int c){
 		int big = 0;
 		if (a > b || a > c) {
 			big = a;
@@ -21,9 +36,7 @@ public class BigNumber {
 		} else {
 			big = c;
 		}
-
-		System.out.println("가장 큰 수는" + big + "입니다");
-
+		return big;
+	
 	}
-
 }

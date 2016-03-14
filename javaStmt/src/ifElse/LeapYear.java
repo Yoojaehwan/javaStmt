@@ -21,7 +21,7 @@ public class LeapYear {
 		int year = scanner.nextInt();
 		String yearStr = "";
 		
-		if (year % 4 == 0 || year==2000 ) { // 100으로 나눠 떨어진다
+		if (year % 4 == 0 || year==2000 ) { 
 			yearStr = "윤년";
 		}else if(year % 1 ==0){
 			yearStr = "평년";
