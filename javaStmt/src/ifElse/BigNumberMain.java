@@ -26,7 +26,7 @@ public class BigNumberMain {
 //{}메모리 영억 ,  BigNumber b = new BigNumber
 class BigNumber {
 	/*public BigNumber() {
-		//  생략되었다.}
+		// T 생략되었다.}
 */	public int getBigNum(int a, int b, int c){
 		int big = 0;
 		if (a > b || a > c) {
