@@ -13,7 +13,7 @@ public class Gender {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("이름을 입력하세요");
 		System.out.println("주민번호를 입력하세요");
-		String name= scanner.next(), ssn=scanner.next(), male="남자", female="여자" ,forgin="외국인";
+		String name= scanner.next(), ssn=scanner.next(), male="남자", female="여자" ,foreigner="외국인", genders="";
 		char flag = ssn.charAt(7);
 		/**
 		 * 800101-1234567 일때 
@@ -25,16 +25,16 @@ public class Gender {
 		 * 다른 값이면 잘못된 주민번호입니다.
 		 * */
 		switch (flag) {
-		case '1': break;
-		case '3': break;
-		case '2': break;
-		case '4': break;
-		case '5': break;
-		case '6': break;
+		case '1':  genders+=male; break;
+		case '3': genders+=male; break;
+		case '2': genders+=female; break;
+		case '4': genders+=female; break;
+		case '5': genders+=foreigner; break;
+		case '6': genders+=foreigner; break;
 
 		default:
 			break;
 		}
-		System.out.println("홍길동은 남자입니다.");
+		System.out.println(name+"은" +genders+"입니다.");
 	}
 }

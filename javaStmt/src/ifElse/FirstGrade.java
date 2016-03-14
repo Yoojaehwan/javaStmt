@@ -18,13 +18,19 @@ public class FirstGrade {
 		int bScore = scanner.nextInt();
 		String cName = scanner.next();
 		int cScore = scanner.nextInt();
-
-		if (true) {
-
-		} else {
-
+		int grade=0;
+		String name="";
+		if (aScore > bScore || aScore > cScore) {
+				grade += aScore;
+				name = aName;
+		} else if(bScore>cScore){
+				grade += bScore;
+				name = bName;
+		}else{
+			grade += cScore;
+			name = cName;
 		}
-		System.out.println("1등은 홍길동, 90점 입니다");
+		System.out.println("1등은 "+name+", "+grade+"점 입니다");
 	}
 
 }

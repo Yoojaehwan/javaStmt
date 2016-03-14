@@ -21,11 +21,27 @@ public class Pass {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("학생이름, 자바점수, JSP점수, SQL점수, 스프링점수를 입력");
-		String name = scanner.next();
+		String name = scanner.next(), pass="";
 		int javaS = scanner.nextInt() , jsp = scanner.nextInt(), sql=scanner.nextInt(), spring = scanner.nextInt();
-		int total = 0, avg = 0;
-	
+		int total = javaS+jsp+sql+spring ;
+		double avg=total/4;
+		int totlaAvg=0;
 		
-		System.out.println(name+"은 "+ total+"점수로" +"**하셨습니다.");
+		switch (totlaAvg) {
+		case 100: 
+		case 90:  
+		case 70:  
+		case 60:   pass="합격"; break;
+		case 50:  
+		case 40: 
+		case 30: 
+		case 20:  
+		case 10:  
+		case 0:   pass="불합격"; break;
+		default:
+			break;
+		}
+		
+		System.out.println(name+"은 "+ avg+"점수로" +pass+"하셨습니다.");
 	}
 }
