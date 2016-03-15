@@ -3,20 +3,23 @@ package bank;
 import java.util.Scanner;
 
 public class BankMain {
-	public static void main(String[] args) {
-		//지역변수영역
+	public static void main(String[] args)
+	{
+		//지역변수 영역
 		Scanner scanner = new Scanner(System.in);
 		BankServiceImpl service = new BankServiceImpl();
-		AdminBackServiceImpl admin = new AdminBackServiceImpl(100);
-	
-		//연산영역
-		System.out.println("이름, 비밀번호를 입력하세요");
+		AdminBankServiceImpl2 admin = new AdminBankServiceImpl2(100);
+		
+		
+		//연산
+		System.out.println("이름, 비번 입력");
 		System.out.println(service.openAccount(scanner.next(), scanner.nextInt()));
-		System.out.println("입금 금액을 입력하세요");
-		System.out.println(service.depoit(scanner.nextInt()));
-		System.out.println("출금 금액을 입력하세요");
-		System.out.println(service.withdraw(scanner.nextInt()));
-		System.out.println("잔액확인");
-		System.out.println(service.findMoney());
+		System.out.println("입금액을 입력하세요");
+		System.out.println(service.deposit(scanner.nextInt()));
+		
+		
+		
+		
 	}
+
 }

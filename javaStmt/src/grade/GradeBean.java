@@ -2,11 +2,14 @@ package grade;
 
 public class GradeBean {
 		private String name;
-		private int shoolNum, java, sql, jsp, spring;
+		private int hak, java, sql, jsp, spring;
+		
+		//생성자 오버로딩
+		public GradeBean() {} //defalut 
 
-		public GradeBean(String name, int shoolNum, int java, int sql, int jsp, int spring){
+		public GradeBean( int hak, String name, int java, int sql, int jsp, int spring){
+			this.hak = hak;
 			this.name = name;
-			this.shoolNum = shoolNum;
 			this.java = java;
 			this.sql = sql;
 			this.jsp = jsp;
@@ -21,12 +24,12 @@ public class GradeBean {
 			this.name = name;
 		}
 
-		public int getShoolNum() {
-			return shoolNum;
+		public int getHak() {
+			return hak;
 		}
 
-		public void setShoolNum(int shoolNum) {
-			this.shoolNum = shoolNum;
+		public void setHak(int shoolNum) {
+			this.hak = shoolNum;
 		}
 
 		public int getJava() {
@@ -63,7 +66,7 @@ public class GradeBean {
 
 		@Override
 		public String toString() {
-			return "성적표 [이름=" + name + ", 학번=" + shoolNum + ", 자바=" + java + ", SQL=" + sql + ", JSP=" + jsp
+			return "성적표 [학번=" + hak + ", 이름=" + name + ",  자바=" + java + ", SQL=" + sql + ", JSP=" + jsp
 					+ ", SPRING=" + spring + "]";
 		}
 
