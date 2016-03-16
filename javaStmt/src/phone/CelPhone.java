@@ -4,6 +4,10 @@ public class CelPhone  extends Phone{
    private boolean portalble; //이동성 존재
    private String move;
 
+   
+   public CelPhone() {
+	this.setPortalble(true); // 움직이게 만들기 위해서 
+   }
    public boolean isPortalble() {
       return portalble;
    }
@@ -25,7 +29,7 @@ public class CelPhone  extends Phone{
       }
    @Override
 	public String getCall() {
-		return this.getMove();
+		return super.getCall()+"동시에 " +this.getMove();
 	}
    }
 

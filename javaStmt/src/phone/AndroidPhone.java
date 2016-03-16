@@ -32,6 +32,16 @@ public class AndroidPhone extends IPhone{
 	      
 	      
 	}
+	@Override
+	public void setCall(String call) {
+		// TODO Auto-generated method stub
+		super.setCall(call);
+	}
+	@Override
+	public String getCall() {
+		// TODO Auto-generated method stub
+		return super.getCall();
+	}
 	
 	
 }
